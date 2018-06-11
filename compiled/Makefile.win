@@ -1,0 +1,36 @@
+# Project: commands
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = get_commands.o parser.o print_commands.o $(RES)
+LINKOBJ  = get_commands.o parser.o print_commands.o $(RES)
+LIBS =  -L"lib"  
+INCS =  -I"include" 
+CXXINCS =  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include" 
+BIN  = commands.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before commands.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "commands.exe" $(LIBS)
+
+get_commands.o: get_commands.c
+	$(CC) -c get_commands.c -o get_commands.o $(CFLAGS)
+
+parser.o: parser.c
+	$(CC) -c parser.c -o parser.o $(CFLAGS)
+
+print_commands.o: print_commands.c
+	$(CC) -c print_commands.c -o print_commands.o $(CFLAGS)

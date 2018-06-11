@@ -1,0 +1,23 @@
+This zip file contains the skeleton code required for HW3 in CMPS 405.
+You should download this zip file into a Linux virtual machine and then
+unzip it there.  
+
+Compiling
+=========
+Use the terminal to change to the skeleton code directory, and run "make" 
+in order to build the program.  This produces a binary named "parser" that 
+you can run.  Consider this example:
+cd hw3-skel
+make
+./parser
+
+If you don't like the idea of using make, you can also manually compile
+the code as follows:
+gcc -o parser *.c
+./parser
+
+Where to Work
+=============
+You will need to make changes to both parser.c and get_commands.c in
+order to complete this homework.  See the handout for more details about
+what you are supposed to do.
